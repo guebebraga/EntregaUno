@@ -15,6 +15,7 @@ grid-template-areas: 'header header'
                      'main main'
                      'footer footer';
 height: 100vh;
+row-gap: 20px;
 }
 
 .hero
@@ -60,7 +61,8 @@ grid-template-columns: 1.7fr 1fr;
 grid-template-rows: 650px 450px 400px;
 grid-template-areas: 'aside section'
                      'figure div1'
-                     'articulo div2';    
+                     'articulo div2'; 
+gap: 15px;  
 }
 
 .article{
@@ -92,7 +94,7 @@ grid-area: aside;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-template-rows: 325px 325px;
-gap:5px;
+gap: 1rem;
 }
 
 /* Elemento creado */
@@ -100,13 +102,20 @@ gap:5px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding-top: 1.5rem;
 }
-/*Imagen elemento creado*/
+
 .producto img {
     width:100%;
-    height: 280px;
-    align-self: center;
-   
+    height: 250px;
+    align-self:center;
+    border-radius: 25px;  
+}
+
+.producto p {
+text-align: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: dimgray;
 }
 
 .section
@@ -131,3 +140,65 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 color: white;
 padding-left: 10px;   
 }
+
+@media(max-width:600px){
+body
+{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 60px 60px 650px 450px 450px 450px 450px 450px 50px;
+grid-template-areas: 'header'
+                     'header'
+                     'main'
+                     'main'
+                     'main'
+                     'main'
+                     'main'
+                     'main'
+                     'footer';
+height: 100vh;
+}
+.hero
+{
+grid-area: header;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows:60px 60px;
+grid-template-areas: 'nombre'
+                     'listas';
+}
+.hero li{
+    font-size:medium;
+}
+.main
+{
+grid-area: main;
+display: grid;
+grid-template-columns: 1fr ;
+grid-template-rows:650px 450px 400px;
+grid-template-areas: 'aside'
+                     'section'
+                     'articulo'
+                     'div1'
+                     'figure'
+                     'div2'; 
+}
+
+.producto img{
+    height: 150px;
+}
+
+.article
+{
+font-size: small;    
+}
+
+.footer{
+grid-area: footer;    
+}
+
+.footer li{
+    font-size:small;
+}
+}
+

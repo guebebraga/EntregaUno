@@ -1,45 +1,45 @@
 const productos = [
     {
-     nombre: 'Pillamas',
-     link: 'https://images.unsplash.com/photo-1630361102412-bd7ed8710307?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ0fEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+     nombre: 'Juegos',
+     link: 'https://i.pinimg.com/236x/fe/67/d7/fe67d7387793d711f1fc0c6ccaa79229.jpg',
      precio: 20, 
     },
     {
-     nombre: 'Capuchas',
-     link: 'https://images.unsplash.com/photo-1629907959345-f538f62b9faf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDYyfEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',   
+     nombre: 'Correas',
+     link: 'https://i.pinimg.com/236x/5e/34/7f/5e347f6294f7fb353a377e9792a87988.jpg',   
      precio: 30,
     },
     {
-     nombre: 'Colgantes',
-     link: 'https://images.unsplash.com/photo-1629740067905-bd3f515aa739?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDczfEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+     nombre: 'Para Dormir',
+     link: 'https://i.pinimg.com/236x/2e/87/fa/2e87fa1ce277e90fce89c1d0af9de9c4.jpg',
      precio: 25,
     },
     {
-     nombre:'Sport', 
-     link : 'https://images.unsplash.com/photo-1629824230786-1c212b964863?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDc2fEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',   
+     nombre:'Accesorios', 
+     link : 'https://i.pinimg.com/236x/a1/5f/dd/a15fdd491e96250d2b5455bdfaa8b448.jpg',   
      precio: 15,
     },
     
     {
-     nombre:'Yankie',
-     link: 'https://images.unsplash.com/photo-1609231616387-5e652b6b14f1?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEwN3xKcGc2S2lkbC1Ia3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',   
+     nombre:'Pretales',
+     link: 'https://i.pinimg.com/236x/dd/08/39/dd083986e6106a8b420c7bc7dd1a9999.jpg',   
      precio: 52,
     },
     
     {
-     nombre:'Raper',
-     link:'https://images.unsplash.com/photo-1618071147329-803bf99d9746?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEwOHxKcGc2S2lkbC1Ia3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',   
+     nombre:'Collares',
+     link:'https://i.pinimg.com/236x/51/c9/7d/51c97df5cb02f9e4aec1572961408b76.jpg',   
      precio: 12,
     },
     
     {
-     nombre:'Grafiti',
-     link:'https://images.unsplash.com/photo-1529330121067-e61627c90967?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDUwMXxKcGc2S2lkbC1Ia3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',   
+     nombre:'Ropa',
+     link:'https://i.pinimg.com/236x/7e/33/ca/7e33cacd000c6897f70a67f8b1ea8c00.jpg',   
      precio: 13,
     },
     {
-     nombre:'Pretales',
-     link:'https://images.unsplash.com/photo-1624956741711-9e4001049662?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQzOHxKcGc2S2lkbC1Ia3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',   
+     nombre:'Mochilas',
+     link:'https://i.pinimg.com/236x/58/fd/07/58fd0780bbb1f015792af53b9026c479.jpg',   
      precio: 54,
     },
 ];
@@ -47,21 +47,19 @@ const aside = document.getElementsByTagName("aside")[0];
 
 const crearYAgregarProducto = (producto)=> {  
     const contenedor = document.createElement("div");
-    
-    const nombreProducto = document.createElement("h2");
-
+    const nombre = document.createElement('p');
     const imagenProducto = document.createElement("img");
 
     //al div le agrego nombreProducto y imagenProducto
-    contenedor.appendChild(nombreProducto);
     contenedor.appendChild(imagenProducto);
+    contenedor.appendChild(nombre);
+
+    nombre.textContent= producto.nombre;
 
     //le agrego una clase al contenedor
-    contenedor.classList.add("producto");
-
-    //le agrego un texto de contenido al producto
-    nombreProducto.textContent= producto.nombre;
+    contenedor.classList.add("producto");    
     
+
     //seteo atributos de la imagen
     imagenProducto.setAttribute("src",producto.link);
     imagenProducto.setAttribute("alt", producto.nombre);
