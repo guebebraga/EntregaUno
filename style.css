@@ -73,7 +73,7 @@ gap: 15px;
 
 .figure{
     grid-area: figure;
-    background-image: url(https://images.unsplash.com/photo-1630421535202-1ed447487a72?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQ2fEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+    background-image: url(https://images.unsplash.com/photo-1525252935900-333f50beecb2?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -146,7 +146,7 @@ body
 {
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: 60px 60px 650px 450px 450px 450px 450px 450px 50px;
+grid-template-rows: 60px 60px 420px 450px 450px 450px 450px 450px 50px;
 grid-template-areas: 'header'
                      'header'
                      'main'
@@ -175,7 +175,7 @@ grid-template-areas: 'nombre'
 grid-area: main;
 display: grid;
 grid-template-columns: 1fr ;
-grid-template-rows:650px 450px 400px;
+grid-template-rows:420px 450px 400px;
 grid-template-areas: 'aside'
                      'section'
                      'articulo'
@@ -184,8 +184,20 @@ grid-template-areas: 'aside'
                      'div2'; 
 }
 
+.aside{
+grid-area: aside;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 210px 210px;
+gap: 1rem;
+}
+
+.producto{
+height: 200px;
+}
+
 .producto img{
-    height: 150px;
+height: 150px;
 }
 
 .article
