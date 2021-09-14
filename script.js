@@ -10,7 +10,7 @@ const productos = [
      precio: 30,
     },
     {
-     nombre: 'Para Dormir',
+     nombre: 'Cuchas',
      link: 'https://i.pinimg.com/236x/2e/87/fa/2e87fa1ce277e90fce89c1d0af9de9c4.jpg',
      precio: 25,
     },
