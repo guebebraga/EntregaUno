@@ -71,3 +71,28 @@ const crearYAgregarProducto = (producto)=> {
 for(let i = 0 ; i < productos.length ; i++){
     crearYAgregarProducto(productos[i]);
 }
+
+
+function limita(maximoCaracteres) {
+    let elemento = document.getElementById("texto");
+
+    if(elemento.value.length >= maximoCaracteres) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+const actualizaInfo = (maximoCaracteres) => {
+    let elemento = document.getElementById("texto");
+    let info = document.getElementById("info");
+
+    if(elemento.value.length >= maximoCaracteres) {
+        info.textContent = "Máximo 100 caracteres";
+    } else {
+        const difMax = maximoCaracteres - elemento.value.length
+        info.textContent = `Puede seguir escribiendo ${difMax} caracteres`
+    }
+}
+

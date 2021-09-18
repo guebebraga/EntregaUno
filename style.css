@@ -21,12 +21,16 @@ body
 .hero
 {
     grid-area: header;
+    
+}
+
+.nav{
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 'nombre listas';
 }
 
-.hero h1
+.nav h1
 {
     grid-area: nombre;
     font-size:35px;
@@ -36,7 +40,7 @@ body
     text-align: center;
 }
 
-.hero ul
+.nav ul
 {
     grid-area: listas;
     text-align:center;
@@ -45,7 +49,7 @@ body
     padding-top: 7px;
 }
 
-.hero li
+.nav li
 {
     display: inline;
     font-size:x-large;
@@ -67,7 +71,14 @@ body
 
 .article{
     grid-area: articulo;
-    padding: 50px;
+    padding: 50px;   
+}
+
+.article h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.parrafo{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -87,7 +98,8 @@ body
     font-family: 'Roboto', sans-serif;
     color: dimgrey;
 }
-.figure button{
+.figure button
+{
     font-size: 1.2rem;
     width: 100px;
     height: 40px;
@@ -99,10 +111,36 @@ body
     z-index: 0;
 }
 
-.div1{
+.div1
+{
     grid-area: div1;
 }
 
+#info
+{
+    font-size:larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#texto
+{
+    background-image: url('https://cdn.dribbble.com/users/259220/screenshots/10640050/media/170b53ca3c161d085bc71f43ed1ef3df.png?compress=1&resize=400x300');
+    font-size:x-large;
+
+}
+.botonTextArea
+{
+    font-size: 1.2rem;
+    width: 100px;
+    height: 40px;
+    border-color:chocolate;
+    color:chocolate;
+    background:none; 
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+
+}
 .div2
 {
     grid-area: div2;
@@ -188,7 +226,7 @@ body
     grid-template-areas: 'nombre'
                          'listas';
 }
-.hero li{
+.nav li{
     font-size:medium;
 }
 .main
