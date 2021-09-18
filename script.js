@@ -1,7 +1,7 @@
 const productos = [
     {
      nombre: 'Juegos',
-     link: 'https://i.pinimg.com/236x/fe/67/d7/fe67d7387793d711f1fc0c6ccaa79229.jpg',
+     link: 'https://i.pinimg.com/236x/da/04/18/da04188f52cf14e3ab3f159d583e0d21.jpg',
      precio: 20, 
     },
     {
@@ -11,43 +11,44 @@ const productos = [
     },
     {
      nombre: 'Cuchas',
-     link: 'https://i.pinimg.com/236x/2e/87/fa/2e87fa1ce277e90fce89c1d0af9de9c4.jpg',
+     link: 'https://i.pinimg.com/236x/a6/64/ec/a664ec323750e48a6be9f9cf58039e84.jpg',
      precio: 25,
     },
     {
      nombre:'Accesorios', 
-     link : 'https://i.pinimg.com/236x/a1/5f/dd/a15fdd491e96250d2b5455bdfaa8b448.jpg',   
+     link : 'https://i.pinimg.com/236x/e5/bf/e1/e5bfe1cfa27a679c4fc9866778f537ff.jpg',   
      precio: 15,
     },
     
     {
      nombre:'Pretales',
-     link: 'https://i.pinimg.com/236x/dd/08/39/dd083986e6106a8b420c7bc7dd1a9999.jpg',   
+     link: 'https://i.pinimg.com/236x/8f/7d/a6/8f7da6092777a362409cdc9a7e4f7710.jpg',   
      precio: 52,
     },
     
     {
      nombre:'Collares',
-     link:'https://i.pinimg.com/236x/51/c9/7d/51c97df5cb02f9e4aec1572961408b76.jpg',   
+     link:'https://i.pinimg.com/236x/fd/d2/4f/fdd24fc60ee0d65a6d4ff50a8e30aa42.jpg',   
      precio: 12,
     },
     
     {
-     nombre:'Ropa',
-     link:'https://i.pinimg.com/236x/7e/33/ca/7e33cacd000c6897f70a67f8b1ea8c00.jpg',   
+     nombre:'Capuchas',
+     link:'https://i.pinimg.com/236x/a1/cb/83/a1cb8345baeef69e6ca4353668e2834a.jpg',   
      precio: 13,
     },
     {
      nombre:'Mochilas',
-     link:'https://i.pinimg.com/236x/58/fd/07/58fd0780bbb1f015792af53b9026c479.jpg',   
+     link:'https://i.pinimg.com/236x/5a/36/a7/5a36a7194f5a8bf4546870df10d912d9.jpg',   
      precio: 54,
     },
 ];
-const aside = document.getElementsByTagName("aside")[0];
+const section = document.getElementsByTagName("section")[0];
 
 const crearYAgregarProducto = (producto)=> {  
     const contenedor = document.createElement("div");
     const nombre = document.createElement('p');
+
     const imagenProducto = document.createElement("img");
 
     //al div le agrego nombreProducto y imagenProducto
@@ -64,7 +65,7 @@ const crearYAgregarProducto = (producto)=> {
     imagenProducto.setAttribute("src",producto.link);
     imagenProducto.setAttribute("alt", producto.nombre);
     
-    aside.appendChild(contenedor);
+    section.appendChild(contenedor);
 }
 
 for(let i = 0 ; i < productos.length ; i++){
