@@ -34,8 +34,8 @@ body
 {
     grid-area: nombre;
     font-size:35px;
-    font-family:cursive;
-    background-color: rgb(0, 148, 0);
+    font-family: 'Dancing Script', cursive;
+    background-color: rgb(73, 73, 73);
     color: white;
     text-align: center;
 }
@@ -44,7 +44,7 @@ body
 {
     grid-area: listas;
     text-align:center;
-    background-color:darkgreen;
+    background-color:dimgray;
     color: white;
     padding-top: 7px;
 }
@@ -53,7 +53,7 @@ body
 {
     display: inline;
     font-size:x-large;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Dancing Script', cursive;
     padding: 10px;
 }
 
@@ -188,7 +188,7 @@ body
 .footer
 {
     grid-area: footer;
-    background-color: dimgray;
+    background-color: rgb(73, 73, 73);
     padding-top: 7px; 
 }
 

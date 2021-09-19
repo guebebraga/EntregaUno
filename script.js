@@ -83,7 +83,6 @@ function limita(maximoCaracteres) {
     }
 }
 
-
 const actualizaInfo = (maximoCaracteres) => {
     let elemento = document.getElementById("texto");
     let info = document.getElementById("info");
