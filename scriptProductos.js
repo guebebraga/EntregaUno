@@ -34,7 +34,7 @@ const productos = [
     
     {
         nombre:'Capuchas',
-        link:'https://i.pinimg.com/236x/a1/cb/83/a1cb8345baeef69e6ca4353668e2834a.jpg',   
+        link:'https://i.pinimg.com/236x/a1/cb/83/a1cb8345baeef69e6ca4353668e2834a.jpg',  
         precio: 13,
     },
     {
@@ -42,9 +42,49 @@ const productos = [
         link:'https://i.pinimg.com/236x/5a/36/a7/5a36a7194f5a8bf4546870df10d912d9.jpg',   
         precio: 54,
     },
+    {
+        nombre: 'Set correa',
+        link:'https://i.pinimg.com/236x/f7/5b/14/f75b14ab8a6927819a521cbb1e0b3199.jpg',
+        precio: 60,
+    },
+    {
+        nombre:'Iglu',
+        link:'https://i.pinimg.com/236x/63/0b/e2/630be26b1be8fce7d3118159ee7ce056.jpg',
+        precio:23,
+    },
+    {
+        nombre:'Botellas',
+        link:'https://i.pinimg.com/236x/ba/12/df/ba12df3fc5ac6f4b4a07795ec349fa78.jpg',
+        precio: 42,
+    },
+    {
+        nombre:'Mochi',
+        link:'https://i.pinimg.com/236x/04/9a/6a/049a6ae5f5480552de6763a9469b8b05.jpg',
+        precio: 50,
+    },
+    {
+        nombre:'Gorras',
+        link:'https://i.pinimg.com/236x/61/42/40/614240751cc06df14e0d5fc29ad50b74.jpg',
+        precio: 34,
+    },
+    {
+        nombre:'Remeras',
+        link:'https://i.pinimg.com/236x/12/7b/3d/127b3df33d621d53309c495adcbbdd57.jpg',
+        precio: 34,
+    },
+    {
+        nombre:'Esencial',
+        link:'https://i.pinimg.com/236x/fd/f9/20/fdf920c205812d1eb4abe142f09df1ff.jpg',
+        precio: 34,
+    },
+    {
+        nombre:'Extencibles',
+        link:'https://i.pinimg.com/236x/d2/fb/cf/d2fbcfa03241224a7cb2749b66c61821.jpg',
+        precio: 34,
+    },
     
 ];
-const section = document.getElementsByTagName("section")[0];
+const main = document.getElementsByTagName("main")[0];
 
 const crearYAgregarProducto = (producto)=> {  
     const contenedor = document.createElement("div");
@@ -66,33 +106,9 @@ const crearYAgregarProducto = (producto)=> {
     imagenProducto.setAttribute("src",producto.link);
     imagenProducto.setAttribute("alt", producto.nombre);
     
-    section.appendChild(contenedor);
+    main.appendChild(contenedor);
 }
 
 for(let i = 0 ; i < productos.length ; i++){
     crearYAgregarProducto(productos[i]);
 }
-
-
-function limita(evento , maximoCaracteres) {
-    let elemento = document.getElementById("texto");
-
-    if(elemento.value.length >= maximoCaracteres) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
-const actualizaInfo = (maximoCaracteres) => {
-    let elemento = document.getElementById("texto");
-    let info = document.getElementById("info");
-
-    if(elemento.value.length >= maximoCaracteres) {
-        info.textContent = "Máximo 100 caracteres";
-    } else {
-        const difMax = maximoCaracteres - elemento.value.length
-        info.textContent = `Puede seguir escribiendo ${difMax} caracteres`
-    }
-}
-

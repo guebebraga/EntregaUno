@@ -154,6 +154,7 @@ body
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 325px 325px;
     gap: 1.2rem;
+    padding-left: 5px;
     align-self:center;
 }
 
