@@ -1,8 +1,9 @@
 const productos = [
     {
-        nombre: 'Juegos',
-        link: 'https://i.pinimg.com/236x/da/04/18/da04188f52cf14e3ab3f159d583e0d21.jpg',
-        precio: 20, 
+        nombre:'BuzoCapucha',
+        link:'https://i.pinimg.com/236x/9e/10/85/9e10857908d8d84a1c500fa92c63ce45.jpg',
+        precio:28,
+        clase:'gato',
     },
     {
         nombre: 'Correas',
@@ -15,7 +16,7 @@ const productos = [
         precio: 25,
     },
     {
-        nombre:'Accesorios', 
+        nombre:'Capitas', 
         link : 'https://i.pinimg.com/236x/e5/bf/e1/e5bfe1cfa27a679c4fc9866778f537ff.jpg',   
         precio: 15,
     },
@@ -52,17 +53,13 @@ const crearYAgregarProducto = (producto)=> {
 
     const imagenProducto = document.createElement("img");
 
-    //al div le agrego nombreProducto y imagenProducto
     contenedor.appendChild(imagenProducto);
     contenedor.appendChild(nombre);
 
     nombre.textContent= producto.nombre;
 
-    //le agrego una clase al contenedor
     contenedor.classList.add("producto");    
     
-
-    //seteo atributos de la imagen
     imagenProducto.setAttribute("src",producto.link);
     imagenProducto.setAttribute("alt", producto.nombre);
     
