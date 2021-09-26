@@ -218,7 +218,7 @@ body
                          'footer';
     height: 100vh;
 }
-.hero
+.nav
 {
     grid-area: header;
     display: grid;

@@ -101,5 +101,79 @@ body
     padding-left: 10px;   
 }
 
+@media(max-width:600px){
+
+    body
+    {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 60px 875px 875px 50px;
+    grid-template-areas: 'header'
+                         'header'
+                         'main'
+                         'main'
+                         'footer';
+    height: 100vh;
+}
+
+.nav
+{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 60px;
+    grid-template-areas: 'nombre'
+                         'listas';
+}
+
+.nav h1
+{
+    grid-area: nombre;
+}
+
+.nav ul
+{
+    grid-area: listas;
+}
+
+.main
+{
+    grid-area: main;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'foto foto'
+                         'foto foto'
+                         'foto foto'
+                         'foto foto'
+                         'foto foto'
+                         'foto foto'
+                         'foto foto'
+                         'foto foto';
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+
+.nav li{
+    font-size:medium;
+}
+
+.producto{
+    height: 200px;
+}
+
+.producto img{
+    height: 150px;
+}
+
+.footer{
+    grid-area: footer;    
+}
+
+.footer li{
+    font-size:xx-small;
+}
+}
 
 
