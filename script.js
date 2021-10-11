@@ -96,7 +96,7 @@ const actualizaInfo = (maximoCaracteres) => {
 const botonVerProductos = document.getElementById('button');
 
 function VerProductos(){
-    location.href="C:/Users/gabri/EntregaUno/productos.html"
+    location.href="./productos.html";
   }
 botonVerProductos.addEventListener("click", VerProductos);
 
